@@ -1,23 +1,49 @@
-$(document).ready(function() {
+  const form = document.querySelector('.form-register');
+  const submitButton = document.querySelector('#registrarse');
 
-    //Validamos los datos
-    function validarCuenta(){
-        let usuario = $("#usuario").val();
-        let email = $("#email").val();
-        let contraseña = $("#contraseña").val();
-        let confirmarContraseña = $ ("#contraseña1").val();
-        if(!email.includes('@') || email.length < 5){
-            alert("El email es invalido")
-            return true;
-        }
-        return false;        
-    };
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    $(".btn btn-primary registrarse").click(function(){
-        if(validarCuenta == false){
-            alert("Cuenta creada con exito")
-        }
-    });
+    if (!validarFormulario()) {
+      return;
+    }
+
+    alert('Cuenta creada exitosamente!');
+    form.reset();
   });
-  
-  
+
+  function validarFormulario() {
+    const usuario = document.querySelector('#Usuario');
+    const email = document.querySelector('#email');
+    const contraseña = document.querySelector('#contraseña');
+    const contraseña1 = document.querySelector('#contraseña1');
+
+    if (usuario.value === '' || email.value === '' || contraseña.value === '' || contraseña1.value === '') {
+      alert('Por favor completa todos los campos');
+      return false;
+    }
+
+    if (!validarEmail(email.value)) {
+      alert('El correo electrónico no es válido');
+      return false;
+    }
+
+    if (contraseña.value !== contraseña1.value) {
+
+alert('Las contraseñas no coinciden');
+return false;
+}
+
+if (contraseña.value.length < 6) {
+  alert('La contraseña debe tener al menos 6 caracteres');
+  return false;
+}
+
+return true;
+}
+
+function validarEmail(email) {
+const expresionRegular = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+return expresionRegular.test(email);
+}
+
