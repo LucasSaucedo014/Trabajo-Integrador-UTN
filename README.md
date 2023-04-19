@@ -1,5 +1,8 @@
-<h1> NOMBRE DEL PROYECTO </h1>
+<h1> Detalles del trabajo </h1>
+Nombre del proyecto:
+<ul>
 Trabajo final integrador comisión 102
+</ul>
 
 <br>
 
