@@ -4,8 +4,11 @@ Trabajo final integrador comisión 102
 <br>
 
 Integrantes:
-Castro Facundo
-Lucas Emmanuel Saucedo Bruno
+<ul>
+
+<li>Castro Facundo</li>
+<li>Lucas Emmanuel Saucedo Bruno</li>
+</ul>
 
 <br>
 
