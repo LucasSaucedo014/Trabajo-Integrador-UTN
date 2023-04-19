@@ -72,5 +72,76 @@ $(document).ready(function () {
     $(".cuerpo").addClass("d-none");
     $("#contacto").addClass("d-none");
   });
-  
 });
+const form = document.getElementById('contact-form');
+const fullNameInput = document.getElementById('full-name');
+const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+const subjectInput = document.getElementById('subject');
+const messageInput = document.getElementById('message');
+const submitBtn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  if (validateForm()) {
+    alert(`Nombre completo: ${fullNameInput.value}\nCorreo electrónico: ${emailInput.value}\nTeléfono: ${phoneInput.value}\nAsunto: ${subjectInput.value}\nMensaje: ${messageInput.value}`);
+  }
+});
+
+function validateForm() {
+  let isValid = true;
+
+  if (fullNameInput.value.trim() === '') {
+    fullNameInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    fullNameInput.classList.remove('is-invalid');
+  }
+
+  if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value)) {
+    emailInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    emailInput.classList.remove('is-invalid');
+  }
+
+  if (phoneInput.value.trim() === '' || !isValidPhone(phoneInput.value)) {
+    phoneInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    phoneInput.classList.remove('is-invalid');
+  }
+
+  if (subjectInput.value.trim() === '') {
+    subjectInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    subjectInput.classList.remove('is-invalid');
+  }
+
+  if (messageInput.value.trim() === '') {
+    messageInput.classList.add('is-invalid');
+    isValid = false;
+    } else {
+    messageInput.classList.remove('is-invalid');
+    }
+    
+    return isValid;
+    }
+    
+    function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+    return emailRegex.test(email);
+    }
+    
+    function isValidPhone(phone) {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+    }
+    
+    submitBtn.addEventListener('click', () => {
+    if (!validateForm()) {
+    alert('Por favor, complete todos los campos correctamente.');
+    }
+    });
