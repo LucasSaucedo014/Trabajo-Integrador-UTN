@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-md-6 mx-auto">
     
-            <form id="wizard-form">
+            <form id="wizard-form" >
     
               <!-- Sección 1 -->
               <div class="seccion activa">
@@ -50,12 +50,19 @@
             <div class="seccion">
                 <h3 class="text-center mb-5"><i class="fas fa-address-card"></i> Información de pago</h3>
                 <div class="mb-3">
-                  <label for="tarjeta" class="form-label">Número de tarjeta</label>
-                  <input type="number" class="form-control" id="tarjeta" name="tarjeta" required>
+                  <label for="tarjeta">Número de tarjeta:</label>
+                  <input type="text" class="form-control" id="tarjeta" name="tarjeta" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX" required>
                 </div>
                 <div class="mb-3">
-                  <label for="tarjeta-venc" class="form-label">Fecha de vencimiento</label>
-                  <textarea class="form-control" id="tarjeta-venc" name="tarjeta-venc" required></textarea>
+                  <label for="fecha-vencimiento" class="form-label">Fecha de vencimiento</label>
+                  <input type="text" class="form-control" id="fecha-vencimiento" name="fecha-vencimiento" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/YY" required>
+                  
+                </div>
+                
+                <div class="mb-3">
+                  <label for="cvv">CVV</label>
+                  <input type="number" class="form-control" id="cvv" name="cvv" min="001" max="999" required>
+                  
                 </div>
                 <button class="btn btn-primary anterior" type="button"><i class="fas fa-arrow-left"></i> Anterior</button>
                 <button class="btn btn-primary confirmar" type="button">Confirmar <i class="fas fa-arrow-right"></i></button>
