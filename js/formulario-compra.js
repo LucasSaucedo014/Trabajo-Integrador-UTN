@@ -219,6 +219,7 @@ botonComprobante.addEventListener("click", function() {
   doc.text("Tarjeta: " + tarjeta.value, 10, 60);
   doc.text("Fecha de vencimiento: " + fechaVencimiento.value, 10, 70);
   doc.text("CVV: " + cvv.value, 10, 80);
+  doc.text("Precio final + impuestos(21%): $1500 ", 10, 90);
   
   // Descargamos el PDF con el nombre "comprobante.pdf"
   doc.save("comprobante.pdf");
