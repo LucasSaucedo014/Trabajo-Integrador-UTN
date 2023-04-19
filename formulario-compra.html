@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
 </head>
 <body>
 
@@ -15,7 +17,7 @@
         <div class="row">
           <div class="col-md-6 mx-auto">
     
-            <form id="wizard-form" >
+            <form id="wizard-form" novalidate >
     
               <!-- Sección 1 -->
               <div class="seccion activa">
@@ -66,11 +68,17 @@
                 </div>
                 <button class="btn btn-primary anterior" type="button"><i class="fas fa-arrow-left"></i> Anterior</button>
                 <button class="btn btn-primary confirmar" type="button">Confirmar <i class="fas fa-arrow-right"></i></button>
+                <script>
+                  document.querySelector(".comprobante").addEventListener("click", function() {
+});             </script>
+                <button class="btn btn-primary comprobante" type="button">Comprobante</button>
               </div>
             </div>
 
         </form>
 
             <script src="js/formulario-compra.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
         </body>
 </html>
