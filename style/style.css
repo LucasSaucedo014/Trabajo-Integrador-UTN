@@ -170,21 +170,6 @@ h1:after {
 .hvrbox img {
   max-width: 100%;
 }
-.compra {
-  border-radius: 50%;
-  background: #506c89;
-  display: flex;
-  border-radius: 50px;
-  width: 100px;
-  padding: 10px;
-  margin: 10px 15px;
-  font-size: 21px;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: none;
-  text-align: center;
-}
-
 *,
 *:before,
 *:after {
@@ -372,3 +357,40 @@ h1:after {
 .seccion.activa {
   display: block; /* Mostramos la sección actual */
 }
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #999;
+  cursor: default;
+}
+
+button[type="submit"]:not(:disabled):hover {
+  background-color: #0069d9;
+}
+
