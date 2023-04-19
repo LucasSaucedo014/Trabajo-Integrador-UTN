@@ -1,11 +1,7 @@
 $(document).ready(function () {
   //Validamos los datos
 
-  const nombre = $("#nombre").val();
-  const email = $("#email").val();
-  const telefono = $("#telefono").val();
-  const direccion = $("#direccion").val();
-
+ 
   $(".siguiente").click(function () {
     const actual = $(".seccion.activa");
     const siguiente = actual.next();
@@ -22,6 +18,11 @@ $(document).ready(function () {
   });
 
   $(".confirmar").click(function () {
+  const nombre = $("#nombre").val();
+  const email = $("#email").val();
+  const telefono = $("#telefono").val();
+  const direccion = $("#direccion").val();
+
     alert(
       "Nombre del titular: " +
         nombre +
