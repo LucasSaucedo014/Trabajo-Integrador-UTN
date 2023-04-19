@@ -140,6 +140,7 @@ botonConfirmar.addEventListener("click", function(event) {
     "Dirección: " + direccion + "\n" +
     "Número de tarjeta: " + tarjeta + "\n" +
     "Fecha de vencimiento: " + fechaVencimiento + "\n" +
+    "Precio final + impuestos(21%): $1500" + "\n"; 
     "CVV: " + cvv + "\n";
     alert(mensaje);
     }
